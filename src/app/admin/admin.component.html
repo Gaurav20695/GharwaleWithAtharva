@@ -1,0 +1,72 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit(adminform)" #adminform="ngForm">
+    <div class="form-group">
+      <label for="cityname">City Name:</label>
+      <input 
+      type="text"
+       class="form-control"
+        placeholder="Enter City " 
+        ngModel
+         name="city"
+         required
+          id="cityname"
+          #city="ngModel" >
+          <span class="text-danger" *ngIf="!city.valid && city.touched ">Please Enter City</span>
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input
+       type="text"
+       class="form-control"
+       placeholder="Enter Address"
+        ngModel
+         name="address"
+         required
+          id="address"
+          #address="ngModel">
+          <span class="text-danger" *ngIf="!address.valid && address.touched ">Please Enter Address</span>
+    </div>
+    <div class="form-group">
+      <label for="imagepath">Image Path:</label>
+      <input 
+      type="file"
+       class="form-control" 
+       placeholder="Image Path"
+       ngModel
+        name="imagepath"
+        required
+         id="imagepath"
+         #imagepath="ngModel">
+         <span class="text-danger" *ngIf="!imagepath.valid && imagepath.touched ">Please Enter Image Path</span>
+    </div>
+    <div class="form-group">
+      <label for="latitude">Latitude:</label>
+      <input 
+      type="text"
+       class="form-control"
+       placeholder="Enter Latitude"
+       ngModel
+        name="latitude"
+        required
+           id="latitude"
+           #latitude="ngModel">
+           <span class="text-danger" *ngIf="!latitude.valid && latitude.touched ">Please Enter Latitude</span>
+    </div>
+    <div class="form-group">
+      <label for="longitude">Longitude:</label>
+      <input
+       type="text"
+       class="form-control"
+       placeholder="Enter Longitude"
+       ngModel
+        name="longitude"
+        required
+          id="longitude"
+          #longitude="ngModel">
+          <span class="text-danger"*ngIf="!longitude.valid && longitude.touched ">Please Enter Longitude</span>
+    </div>
+ 
+    <button type="submit" class="btn btn-primary" [disabled]="!adminform.valid">Submit</button>
+  </form>
+</div>
+

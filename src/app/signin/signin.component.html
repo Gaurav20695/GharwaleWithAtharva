@@ -1,0 +1,28 @@
+<div class="bg-img">
+  <div class="container">
+  <h2 style="text-align: center;">Login form</h2>
+  <form [formGroup]="signinForm" (ngSubmit)="onSubmit()"  class="container1">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" [ngClass]="{border : !signinForm.get('email').valid && signinForm.get('email').touched}"
+      formControlName="email" placeholder="Enter email" name="email">
+    </div>
+    <span *ngIf="!signinForm.get('email').valid && signinForm.get('email').touched"
+    class="help-block">Please enter valid email.</span>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd"
+      formControlName="password" placeholder="Enter password" name="pwd"[ngClass]="{border : !signinForm.get('password').valid && signinForm.get('password').touched}" >
+    </div>
+    <span *ngIf="!signinForm.get('password').valid && signinForm.get('password').touched"
+    class="help-block">Please enter valid email.</span>
+    <div style="display: grid;">
+      <button [disabled]="!signinForm.get('password').valid && !signinForm.get('password').valid" type="submit" class="btn btn-primary" >Submit</button>
+      <span class="signup" ><a routerLink = '/signup'><h4 class="sign" >SignUp here</h4></a></span>
+    </div>
+
+  </form>
+</div>
+<br>
+</div>
+

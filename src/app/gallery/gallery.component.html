@@ -1,0 +1,30 @@
+<div>
+  <h2><label>Search By City:</label>
+    <input [(ngModel)]="cityEntered" >
+<!-- <button (click)="onSearchClick()" class="btn btn-primary">Search</button> -->
+</h2>
+</div>
+
+
+<hr>
+<div class="hover">
+  <div *ngFor="let gal of gallery | cityFilter:cityEntered ">
+    <div class="col-xs-4" style=" margin-top: 5%;">
+      <div class="card" style="width: 18rem;" >
+        
+              <img [src]="gal.imagePath" height="200px"  class="card-img-top" appHoverover>
+         <div class="card-body">
+           <h5 class="card-title">Address:</h5>
+           <p class="card-text">{{gal.address}}</p>
+           
+          <div style="text-align: center;">
+            <button class="btn btn-primary">Go to Map</button>
+          |
+            <button class="btn btn-primary">Contact Number</button>
+          </div>
+         </div>
+       </div>
+    </div>
+   
+  </div>
+</div>

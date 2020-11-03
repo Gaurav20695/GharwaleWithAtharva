@@ -1,0 +1,36 @@
+.help-block {
+  color: red;
+}
+
+.border{
+  border: 1px solid red;
+}
+
+.signin{
+  margin-left: 4%;
+}
+.bg-img {
+ 
+  background-image: url("https://cdn.pixabay.com/photo/2013/10/09/02/27/boat-house-192990_1280.jpg");
+
+  height: 681px;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container1 {
+  position: absolute;
+  left: 0;
+  margin: 120px;
+  width: 600px;
+  height: 230px;
+  padding: 16px;
+  background-color: white;
+}
+.sign {
+ 
+  padding-left:80%
+}

@@ -1,0 +1,58 @@
+
+<div class="container">
+  <h2 style="text-align: center;" >Preview</h2>
+  <hr>
+  <div class="container">
+              
+    <table class="table table-striped">
+      <thead>
+     <th style="width: 30%;"></th>
+     <th style="width: 50%;"></th>
+      </thead>
+      <tbody style="font-size: 130%; ">
+        <tr >
+          <td>First Name:</td>
+          <td> {{ previewData.firstname}}</td>
+   
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td>{{ previewData.lastname}}</td>
+         
+        </tr>
+        <tr>
+          <td>City:</td>
+          <td>{{ previewData.city}}</td>
+         
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td>{{ previewData.address}}</td>
+         
+        </tr>
+        <tr>
+          <td>Pin Code:</td>
+          <td>{{ previewData.pincode}}</td>
+         
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>{{ previewData.gender}}</td>
+         
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td>{{ previewData.email}}</td>
+         
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+<div style="text-align: center;">
+  <button class="btn btn-primary"(click)="onSubmit()">Submit</button>
+  <button class="btn btn-danger" routerLink="/signup" style="margin-left: 20px;" >Back to signup</button>
+
+  
+</div>
